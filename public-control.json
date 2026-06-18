@@ -1,0 +1,17 @@
+{
+"object_type": "BOUNDARYCAM_PUBLIC_CONTROL",
+"state": "BOUNDARYCAM_PUBLIC_SURFACE_OPEN",
+"public_only": true,
+"private_remaining": 0,
+"system_complete": false,
+"admission_claim": "PUBLIC_AUDIENCE_SURFACE_NOT_SYSTEM_COMPLETION_OBJECT",
+"primary_question": "What crossed the boundary?",
+"tagline": "The camera for machine action.",
+"killer_phrase": "If it touched the world, it needs a boundary frame.",
+"stack_relation": {
+"BOUNDARYCAM": "public audience surface",
+"INVOCORDER": "machine-action evidence recorder",
+"VERIFRAX": "verification and completion perimeter",
+"SPEEDKIT": "public registry and control engine"
+}
+}

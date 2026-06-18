@@ -1,0 +1,36 @@
+{
+"$schema": "https://json-schema.org/draft/2020-12/schema",
+"title": "BOUNDARYCAM Boundary Frame",
+"type": "object",
+"required": [
+"id",
+"actor",
+"action",
+"target",
+"authority",
+"execution",
+"evidence",
+"replay",
+"recognition",
+"recourse",
+"closure",
+"status"
+],
+"properties": {
+"id": { "type": "string" },
+"actor": { "type": "string" },
+"action": { "type": "string" },
+"target": { "type": "string" },
+"authority": { "type": "string" },
+"execution": { "type": "string" },
+"evidence": { "type": "string" },
+"replay": { "type": "string" },
+"recognition": { "type": "string" },
+"recourse": { "type": "string" },
+"closure": { "type": "string" },
+"status": {
+"type": "string",
+"enum": ["BOUNDARY INCOMPLETE", "CONTROLLED", "CLOSED"]
+}
+}
+}

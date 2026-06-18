@@ -1,0 +1,5 @@
+BOUNDARYCAM
+
+The camera for machine action.
+
+If it touched the world, it needs a boundary frame.
