@@ -4,13 +4,19 @@ The camera for machine action.
 
 Before you trust the output, capture the boundary.
 
+BOUNDARYCAM is a public visual and machine-readable control surface for inspecting what crossed the boundary when software, agents, workflows, automations, CI systems, browser agents, API clients, or autonomous systems act.
+
 Software no longer only produces output. It calls tools, submits forms, sends messages, modifies files, triggers workflows, approves records, deletes objects, publishes artifacts, and changes state.
 
 When that happens, the important question is not only what the system produced.
 
 The important question is what crossed the boundary.
 
-BOUNDARYCAM is a public visual surface for machine-action Boundary Frames: actor, action, target, authority, execution, evidence, replay, recognition, recourse, and closure status.
+## Public surface
+
+- Public site: https://qxvi.github.io/BOUNDARYCAM
+- Repository: https://github.com/qxvi/BOUNDARYCAM
+- Release rail: https://github.com/qxvi/BOUNDARYCAM/releases
 
 ## Core question
 
@@ -18,18 +24,13 @@ BOUNDARYCAM is a public visual surface for machine-action Boundary Frames: actor
 What crossed the boundary?
 ````
 
-## Why it exists
+## Product model
 
-Most public AI discussions focus on answers, models, prompts, and outputs. BOUNDARYCAM focuses on the moment software touches the world.
+BOUNDARYCAM represents machine actions as Boundary Frames.
 
-A machine action becomes serious when it crosses a boundary. That boundary may be an email sent, a file deleted, a package published, an invoice approved, a form submitted, a record changed, a tool called, or a workflow completed.
-
-BOUNDARYCAM treats that moment like a camera event.
-
-## Boundary Frame
+A Boundary Frame separates:
 
 ```text
-BOUNDARY FRAME
 Actor
 Action
 Target
@@ -43,6 +44,10 @@ Closure
 Boundary status
 ```
 
+BOUNDARYCAM does not say “trusted” or “not trusted.”
+
+It shows the boundary condition.
+
 ## Public statuses
 
 ```text
@@ -51,20 +56,43 @@ CONTROLLED
 CLOSED
 ```
 
-BOUNDARYCAM does not say “trusted” or “not trusted.” It shows the boundary condition.
-
 ## Stack relation
 
 ```text
-BOUNDARYCAM = public audience surface
+BOUNDARYCAM = public audience and inspection surface
 INVOCORDER = machine-action evidence recorder
 VERIFRAX = verification and completion perimeter
 SPEEDKIT = public registry and control engine
 ```
 
-## Public surface
+## Repository structure
 
-This repository ships a static public interface with sample machine-action frames and a machine-readable boundary schema.
+```text
+BOUNDARYCAM/
+  index.html
+  pages/
+    capture.html
+    frames.html
+    stack.html
+    about.html
+  data/
+    examples.json
+    surfaces.json
+  schemas/
+    boundary-frame.schema.json
+    capture-event.schema.json
+    public-control.schema.json
+  docs/
+    BOUNDARY_MODEL.md
+    CONTROL_SURFACE.md
+    FRAME_STATUS.md
+    STACK_RELATION.md
+  tools/
+    validate.py
+  public-control.json
+  boundarycam-manifest.json
+  boundary-schema.json
+```
 
 ## License
 

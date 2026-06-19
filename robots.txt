@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: [https://qxvi.github.io/BOUNDARYCAM/sitemap.xml](https://qxvi.github.io/BOUNDARYCAM/sitemap.xml)

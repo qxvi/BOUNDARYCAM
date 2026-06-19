@@ -1,0 +1,44 @@
+{
+  "$schema": "[https://json-schema.org/draft/2020-12/schema](https://json-schema.org/draft/2020-12/schema)",
+  "title": "BOUNDARYCAM Public Control Object",
+  "type": "object",
+  "required": [
+    "object_type",
+    "state",
+    "public_only",
+    "primary_question",
+    "tagline"
+  ],
+  "properties": {
+    "object_type": {
+      "type": "string"
+    },
+    "state": {
+      "type": "string"
+    },
+    "public_only": {
+      "type": "boolean"
+    },
+    "private_remaining": {
+      "type": "integer"
+    },
+    "system_complete": {
+      "type": "boolean"
+    },
+    "admission_claim": {
+      "type": "string"
+    },
+    "primary_question": {
+      "type": "string"
+    },
+    "tagline": {
+      "type": "string"
+    },
+    "killer_phrase": {
+      "type": "string"
+    },
+    "stack_relation": {
+      "type": "object"
+    }
+  }
+}

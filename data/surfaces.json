@@ -1,0 +1,54 @@
+{
+  "object_type": "BOUNDARYCAM_SURFACE_INDEX",
+  "public_only": true,
+  "surfaces": [
+    {
+      "id": "SURF-001",
+      "name": "Home",
+      "path": "/BOUNDARYCAM/",
+      "role": "public product entry"
+    },
+    {
+      "id": "SURF-002",
+      "name": "Capture",
+      "path": "/BOUNDARYCAM/pages/capture.html",
+      "role": "boundary question entry"
+    },
+    {
+      "id": "SURF-003",
+      "name": "Frames",
+      "path": "/BOUNDARYCAM/pages/frames.html",
+      "role": "machine-action frame gallery"
+    },
+    {
+      "id": "SURF-004",
+      "name": "Stack",
+      "path": "/BOUNDARYCAM/pages/stack.html",
+      "role": "stack relation explainer"
+    },
+    {
+      "id": "SURF-005",
+      "name": "About",
+      "path": "/BOUNDARYCAM/pages/about.html",
+      "role": "public doctrine explainer"
+    },
+    {
+      "id": "SURF-006",
+      "name": "Public control",
+      "path": "/BOUNDARYCAM/public-control.json",
+      "role": "machine-readable control object"
+    },
+    {
+      "id": "SURF-007",
+      "name": "Manifest",
+      "path": "/BOUNDARYCAM/boundarycam-manifest.json",
+      "role": "public manifest"
+    },
+    {
+      "id": "SURF-008",
+      "name": "Boundary schema",
+      "path": "/BOUNDARYCAM/schemas/boundary-frame.schema.json",
+      "role": "frame schema"
+    }
+  ]
+}

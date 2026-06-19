@@ -2,4 +2,6 @@ BOUNDARYCAM
 
 The camera for machine action.
 
+Before you trust the output, capture the boundary.
+
 If it touched the world, it needs a boundary frame.
