@@ -1,0 +1,12 @@
+services:
+  boundarycam:
+    build: .
+    ports:
+      - "4187:4187"
+    volumes:
+      - boundarycam-data:/data
+    environment:
+      BOUNDARYCAM_DB: /data/boundarycam.sqlite3
+
+volumes:
+  boundarycam-data:

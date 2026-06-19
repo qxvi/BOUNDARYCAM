@@ -1,8 +1,8 @@
 {
   "object_type": "BOUNDARYCAM_PUBLIC_CONTROL",
-  "version": "0.4.0",
-  "state": "BOUNDARYCAM_INTERACTIVE_BOUNDARY_CONSOLE_OPEN",
-  "generated_at": "2026-06-19T21:58:19+00:00",
+  "version": "0.5.0",
+  "state": "BOUNDARYCAM_RUNTIME_CORE_OPEN",
+  "generated_at": "2026-06-19T22:01:22+00:00",
   "product": "BOUNDARYCAM",
   "public_only": true,
   "private_remaining": 0,
@@ -33,5 +33,11 @@
   },
   "completion_object": "boundarycam-completion.json",
   "interactive_console": true,
-  "browser_side_frame_builder": true
+  "browser_side_frame_builder": true,
+  "runtime_core": true,
+  "hash_chained_frames": true,
+  "sqlite_persistence": true,
+  "api_server": true,
+  "cli": true,
+  "docker": true
 }

@@ -1,20 +1,24 @@
 name: verify
 
 on:
-  push:
-    branches: [main]
-  pull_request:
-  workflow_dispatch:
+push:
+branches: [main]
+pull_request:
+workflow_dispatch:
 
 permissions:
-  contents: read
+contents: read
 
 jobs:
-  verify:
-    runs-on: ubuntu-latest
-    steps:
-      - uses: actions/checkout@v4
-      - uses: actions/setup-python@v5
-        with:
-          python-version: "3.x"
-      - run: python3 tools/validate.py
+verify:
+runs-on: ubuntu-latest
+steps:
+- uses: actions/checkout@v4
+- uses: actions/setup-python@v5
+with:
+python-version: "3.12"
+- run: python3 -m pip install --upgrade pip
+- run: pip install -r requirements-dev.txt
+- run: python3 tools/validate.py
+- run: pytest -q
+- run: bash tools/runtime-smoke.sh

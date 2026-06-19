@@ -1,8 +1,8 @@
 {
   "object_type": "BOUNDARYCAM_PRODUCT_CONTROL_COMPLETION",
-  "version": "0.4.0",
-  "state": "BOUNDARYCAM_INTERACTIVE_BOUNDARY_CONSOLE_OPEN",
-  "generated_at": "2026-06-19T21:58:19+00:00",
+  "version": "0.5.0",
+  "state": "BOUNDARYCAM_RUNTIME_CORE_OPEN",
+  "generated_at": "2026-06-19T22:01:22+00:00",
   "public_only": true,
   "private_remaining": 0,
   "primary_question": "What crossed the boundary?",
@@ -12,7 +12,7 @@
   "completion_claim": "BOUNDARYCAM public product/control stack is complete for current v0.3.0 surface, schema, governance, validation, and release inventory.",
   "repo": "https://github.com/qxvi/BOUNDARYCAM",
   "pages": "https://qxvi.github.io/BOUNDARYCAM",
-  "release_tag": "boundarycam-v0.4.0-interactive-boundary-console",
+  "release_tag": "boundarycam-v0.5.0-runtime-core",
   "required_surfaces": [
     "index.html",
     "pages/capture.html",
@@ -65,5 +65,7 @@
     "VERIFRAX": "verification and completion perimeter",
     "SPEEDKIT": "public registry and control engine"
   },
-  "interactive_console": "pages/capture.html"
+  "interactive_console": "pages/capture.html",
+  "runtime_core": "boundarycam_runtime",
+  "runtime_smoke": "tools/runtime-smoke.sh"
 }

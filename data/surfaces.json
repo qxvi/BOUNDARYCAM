@@ -1,6 +1,6 @@
 {
   "object_type": "BOUNDARYCAM_SURFACE_INDEX",
-  "version": "0.4.0",
+  "version": "0.5.0",
   "generated_at": "2026-06-19T21:58:19+00:00",
   "surface_count": 10,
   "surfaces": [
@@ -65,6 +65,12 @@
       "role": "surface index"
     }
   ],
-  "state": "BOUNDARYCAM_INTERACTIVE_BOUNDARY_CONSOLE_OPEN",
-  "interactive_console": "https://qxvi.github.io/BOUNDARYCAM/pages/capture.html"
+  "state": "BOUNDARYCAM_RUNTIME_CORE_OPEN",
+  "interactive_console": "https://qxvi.github.io/BOUNDARYCAM/pages/capture.html",
+  "runtime_core": {
+    "api": "boundarycam_runtime/api.py",
+    "store": "boundarycam_runtime/store.py",
+    "cli": "boundarycam_runtime/cli.py",
+    "smoke": "tools/runtime-smoke.sh"
+  }
 }
