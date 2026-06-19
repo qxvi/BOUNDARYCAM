@@ -6,6 +6,7 @@ from pathlib import Path
 
 from .models import BoundaryFrameInput
 from .store import FrameStore
+from .bundle import build_bundle, read_bundle, verify_bundle, write_bundle
 
 
 def add_capture(sub: argparse._SubParsersAction) -> None:
@@ -35,6 +36,12 @@ def main() -> None:
     verify_p.add_argument("--db", default="runtime/boundarycam.sqlite3")
     receipt_p = sub.add_parser("receipt", help="print runtime receipt")
     receipt_p.add_argument("--db", default="runtime/boundarycam.sqlite3")
+    export_p = sub.add_parser("export-bundle", help="export an Evidence Bundle")
+    export_p.add_argument("--db", default="runtime/boundarycam.sqlite3")
+    export_p.add_argument("--out", default="bundles/boundarycam-evidence-bundle.json")
+    export_p.add_argument("--limit", type=int, default=10000)
+    verify_bundle_p = sub.add_parser("verify-bundle", help="verify an Evidence Bundle JSON file")
+    verify_bundle_p.add_argument("path")
 
     args = parser.parse_args()
     store = FrameStore(Path(args.db))
@@ -67,6 +74,20 @@ def main() -> None:
 
     if args.cmd == "receipt":
         print(json.dumps(store.receipt(), indent=2))
+        return
+
+    if args.cmd == "export-bundle":
+        frames = [frame.model_dump() for frame in store.list_frames_ascending(args.limit)]
+        bundle = build_bundle(frames, source="boundarycam-cli")
+        write_bundle(bundle, args.out)
+        print(json.dumps(bundle, indent=2))
+        return
+
+    if args.cmd == "verify-bundle":
+        result = verify_bundle(read_bundle(args.path))
+        print(json.dumps(result, indent=2))
+        if not result.get("valid"):
+            raise SystemExit(2)
         return
 
 

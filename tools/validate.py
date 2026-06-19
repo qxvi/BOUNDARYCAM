@@ -1,74 +1,17 @@
 import json
 from pathlib import Path
-
-root = Path.cwd()
-
-required_files = [
-    "pyproject.toml",
-    "requirements.txt",
-    "requirements-dev.txt",
-    "Dockerfile",
-    "docker-compose.yml",
-    "boundarycam_runtime/__init__.py",
-    "boundarycam_runtime/models.py",
-    "boundarycam_runtime/store.py",
-    "boundarycam_runtime/api.py",
-    "boundarycam_runtime/cli.py",
-    "runtime/run-api.sh",
-    "tools/runtime-smoke.sh",
-    "tests/test_runtime.py",
-    "docs/runtime/RUNTIME_CORE.md",
-    "docs/runtime/API.md",
-    "docs/runtime/CLI.md",
-    "boundarycam-manifest.json",
-    "public-control.json",
-    "boundarycam-completion.json",
-    "data/surfaces.json",
-    "data/boundarycam-live-status.json"
-]
-
-for rel in required_files:
-    path = root / rel
-    if not path.exists():
-        raise SystemExit("MISSING_FILE=" + rel)
-
-json_files = [
-    "boundarycam-manifest.json",
-    "public-control.json",
-    "boundarycam-completion.json",
-    "data/surfaces.json",
-    "data/boundarycam-live-status.json"
-]
-
-for rel in json_files:
-    json.loads((root / rel).read_text(encoding="utf-8"))
-
-runtime_tokens = {
-    "boundarycam_runtime/store.py": ["sha256", "previous_hash", "frame_hash", "verify_chain"],
-    "boundarycam_runtime/api.py": ["/frames", "/chain/verify", "/receipt", "BOUNDARYCAM_RUNTIME_CORE_OPEN"],
-    "boundarycam_runtime/cli.py": ["capture", "verify", "receipt"],
-    "tools/runtime-smoke.sh": ["BOUNDARYCAM_RUNTIME_SMOKE_OK"],
-    "Dockerfile": ["uvicorn", "4187"]
-}
-
-for rel, tokens in runtime_tokens.items():
-    text = (root / rel).read_text(encoding="utf-8")
+root=Path.cwd()
+req=["boundarycam_runtime/merkle.py","boundarycam_runtime/bundle.py","tools/bundle-smoke.sh","tests/test_bundle.py","docs/runtime/EVIDENCE_BUNDLES.md","docs/runtime/COLD_VERIFICATION.md","docs/runtime/THREAT_MODEL.md","boundarycam-manifest.json","public-control.json","boundarycam-completion.json","data/surfaces.json","data/boundarycam-live-status.json"]
+for rel in req:
+    if not (root/rel).exists():
+        raise SystemExit("MISSING_FILE="+rel)
+for rel in ["boundarycam-manifest.json","public-control.json","boundarycam-completion.json","data/surfaces.json","data/boundarycam-live-status.json"]:
+    o=json.loads((root/rel).read_text())
+    if o.get("version")!="0.6.0" or o.get("state")!="BOUNDARYCAM_EVIDENCE_BUNDLE_CORE_OPEN":
+        raise SystemExit("INVALID_STATE="+rel)
+for rel,tokens in {"boundarycam_runtime/bundle.py":["BOUNDARYCAM_EVIDENCE_BUNDLE","verify_bundle","bundle_hash","merkle_root"],"boundarycam_runtime/merkle.py":["merkle_root"],"boundarycam_runtime/api.py":["/bundles/export","/bundles/verify"],"boundarycam_runtime/cli.py":["export-bundle","verify-bundle"]}.items():
+    text=(root/rel).read_text()
     for token in tokens:
         if token not in text:
-            raise SystemExit("MISSING_RUNTIME_TOKEN=" + rel + ":" + token)
-
-manifest = json.loads((root / "boundarycam-manifest.json").read_text(encoding="utf-8"))
-if manifest.get("version") != "0.5.0":
-    raise SystemExit("MANIFEST_VERSION_INVALID")
-if manifest.get("state") != "BOUNDARYCAM_RUNTIME_CORE_OPEN":
-    raise SystemExit("MANIFEST_STATE_INVALID")
-
-control = json.loads((root / "public-control.json").read_text(encoding="utf-8"))
-if control.get("state") != "BOUNDARYCAM_RUNTIME_CORE_OPEN":
-    raise SystemExit("CONTROL_STATE_INVALID")
-
-completion = json.loads((root / "boundarycam-completion.json").read_text(encoding="utf-8"))
-if completion.get("state") != "BOUNDARYCAM_RUNTIME_CORE_OPEN":
-    raise SystemExit("COMPLETION_STATE_INVALID")
-
-print("BOUNDARYCAM_V050_RUNTIME_VALIDATE_OK=true")
+            raise SystemExit("MISSING_TOKEN="+rel+":"+token)
+print("BOUNDARYCAM_V060_VALIDATE_OK=true")

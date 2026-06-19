@@ -1,8 +1,8 @@
 {
   "object_type": "BOUNDARYCAM_PUBLIC_CONTROL",
-  "version": "0.5.0",
-  "state": "BOUNDARYCAM_RUNTIME_CORE_OPEN",
-  "generated_at": "2026-06-19T22:01:22+00:00",
+  "version": "0.6.0",
+  "state": "BOUNDARYCAM_EVIDENCE_BUNDLE_CORE_OPEN",
+  "generated_at": "2026-06-19T22:23:53+00:00",
   "product": "BOUNDARYCAM",
   "public_only": true,
   "private_remaining": 0,
@@ -39,5 +39,7 @@
   "sqlite_persistence": true,
   "api_server": true,
   "cli": true,
-  "docker": true
+  "docker": true,
+  "evidence_bundle_core": true,
+  "release_tag": "boundarycam-v0.6.0-evidence-bundle-core"
 }

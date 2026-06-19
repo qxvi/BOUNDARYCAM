@@ -7,6 +7,7 @@ from fastapi import FastAPI, HTTPException
 from . import __version__
 from .models import BoundaryFrame, BoundaryFrameInput, Health
 from .store import FrameStore
+from .bundle import build_bundle, verify_bundle
 
 
 def create_app() -> FastAPI:
@@ -50,6 +51,15 @@ def create_app() -> FastAPI:
     @app.get("/receipt")
     def receipt() -> dict:
         return store.receipt()
+
+    @app.get("/bundles/export")
+    def export_bundle(limit: int = 10000) -> dict:
+        frames = [frame.model_dump() for frame in store.list_frames_ascending(limit=max(1, min(limit, 10000)))]
+        return build_bundle(frames, source="boundarycam-runtime-api")
+
+    @app.post("/bundles/verify")
+    def verify_evidence_bundle(bundle: dict) -> dict:
+        return verify_bundle(bundle)
 
     return app
 

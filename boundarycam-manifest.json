@@ -1,8 +1,8 @@
 {
   "object_type": "BOUNDARYCAM_PUBLIC_MANIFEST",
-  "version": "0.5.0",
-  "state": "BOUNDARYCAM_RUNTIME_CORE_OPEN",
-  "generated_at": "2026-06-19T22:01:22+00:00",
+  "version": "0.6.0",
+  "state": "BOUNDARYCAM_EVIDENCE_BUNDLE_CORE_OPEN",
+  "generated_at": "2026-06-19T22:23:53+00:00",
   "name": "BOUNDARYCAM",
   "tagline": "The camera for machine action.",
   "primary_question": "What crossed the boundary?",
@@ -20,7 +20,7 @@
     "schemas/public-control.schema.json",
     "schemas/boundarycam-completion.schema.json"
   ],
-  "release_tag": "boundarycam-v0.5.0-runtime-core",
+  "release_tag": "boundarycam-v0.6.0-evidence-bundle-core",
   "public_only": true,
   "private_remaining": 0,
   "interactive_console": "https://qxvi.github.io/BOUNDARYCAM/pages/capture.html",
@@ -30,5 +30,6 @@
     "sqlite_store": "runtime/boundarycam.sqlite3",
     "hash_chain": true,
     "docker": "Dockerfile"
-  }
+  },
+  "evidence_bundle_core": true
 }

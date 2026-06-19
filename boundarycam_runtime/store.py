@@ -195,3 +195,8 @@ class FrameStore:
             "head_hash": verification["head_hash"],
             "chain_valid": verification["valid"],
         }
+
+    def list_frames_ascending(self, limit: int = 10000) -> list[BoundaryFrame]:
+        with self.connect() as conn:
+            rows = conn.execute("SELECT frame_json FROM frames ORDER BY sequence ASC LIMIT ?", (limit,)).fetchall()
+        return [BoundaryFrame(**json.loads(row["frame_json"])) for row in rows]
