@@ -1,77 +1,95 @@
 <!doctype html>
-
 <html lang="en">
 <head>
   <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width,initial-scale=1">
-  <title>BOUNDARYCAM · The camera for machine action</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>BOUNDARYCAM — The camera for machine action</title>
   <meta name="description" content="BOUNDARYCAM captures what crossed the boundary when agents, workflows, and autonomous systems act.">
+  <meta property="og:title" content="BOUNDARYCAM">
+  <meta property="og:description" content="The camera for machine action.">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://qxvi.github.io/BOUNDARYCAM/">
+  <link rel="manifest" href="boundarycam-manifest.json">
   <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-  <main>
-    <nav class="nav">
-      <a href="./">BOUNDARYCAM</a>
-      <a href="pages/capture.html">Capture</a>
-      <a href="pages/frames.html">Frames</a>
-      <a href="pages/stack.html">Stack</a>
-      <a href="pages/about.html">About</a>
+  <header class="shell hero">
+    <nav class="topbar">
+      <a class="mark" href="./">BOUNDARYCAM</a>
+      <div class="navlinks">
+        <a href="pages/capture.html">Capture</a>
+        <a href="pages/frames.html">Frames</a>
+        <a href="pages/stack.html">Stack</a>
+        <a href="pages/about.html">About</a>
+        <a href="boundarycam-completion.json">Completion</a>
+      </div>
     </nav>
 
+    <section class="hero-grid">
+      <div>
+        <p class="eyebrow">Public machine-action boundary camera</p>
+        <h1>The camera for machine action.</h1>
+        <p class="lead">Before you trust the output, capture the boundary.</p>
+        <p class="question">What crossed the boundary?</p>
+        <div class="actions">
+          <a class="button primary" href="pages/capture.html">Capture an action</a>
+          <a class="button" href="boundarycam-completion.json">View completion object</a>
+        </div>
+      </div>
 
-<section class="hero">
-  <div class="mark">BOUNDARYCAM</div>
-  <h1>The camera for machine action.</h1>
-  <p class="lead">Before you trust the output, capture the boundary.</p>
-  <p class="sub">Software no longer only produces text. It calls tools, submits forms, sends messages, modifies files, approves records, deletes objects, publishes artifacts, and changes state. When that happens, the important question is what crossed the boundary.</p>
-  <div class="actions">
-    <a href="pages/capture.html">Capture an action</a>
-    <a href="pages/frames.html">View Boundary Frames</a>
-    <a href="public-control.json">Open control object</a>
-  </div>
-</section>
+      <aside class="status-card">
+        <p class="eyebrow">Current state</p>
+        <h2>PRODUCT CONTROL COMPLETE</h2>
+        <dl>
+          <div><dt>Version</dt><dd>0.4.0</dd></div>
+          <div><dt>Surface</dt><dd>Interactive Boundary Console</dd></div>
+          <div><dt>Public-only</dt><dd>true</dd></div>
+          <div><dt>Private remaining</dt><dd>0</dd></div>
+        </dl>
+      </aside>
+    </section>
+  </header>
 
-<section class="strip">
-  <span>ACTION CAPTURED</span>
-  <span>BOUNDARY CROSSED</span>
-  <span>AUTHORITY CHECKED</span>
-  <span>EVIDENCE RECORDED</span>
-  <span>REPLAY AVAILABLE</span>
-  <span>RECOURSE STATUS</span>
-</section>
+  <main class="shell">
+    <section class="panel">
+      <div>
+        <p class="eyebrow">Boundary frame model</p>
+        <h2>Every external machine action needs a frame.</h2>
+        <p>BOUNDARYCAM records actor, action, target, authority, execution, evidence, replay, recognition, recourse, and closure as public inspection structure.</p>
+      </div>
+      <div class="grid cards">
+        <article><strong>Actor</strong><span>Who or what acted?</span></article>
+        <article><strong>Action</strong><span>What happened?</span></article>
+        <article><strong>Target</strong><span>What was touched?</span></article>
+        <article><strong>Authority</strong><span>Why was it allowed?</span></article>
+        <article><strong>Evidence</strong><span>What can be checked?</span></article>
+        <article><strong>Recourse</strong><span>How can it be challenged?</span></article>
+      </div>
+    </section>
 
-<section class="question">
-  <h2>If it touched the world, it needs a boundary frame.</h2>
-  <p>BOUNDARYCAM does not label systems as trusted or untrusted. It shows whether authority, execution, evidence, replay, recognition, recourse, and closure are present.</p>
-</section>
-
-<section id="frames" class="frames">
-  <div class="section-head">
-    <p>Captured examples</p>
-    <h2>Boundary Frames</h2>
-  </div>
-  <div id="cards" class="cards"></div>
-</section>
-
-<section class="stack">
-  <h2>Stack relation</h2>
-  <div class="stackgrid">
-    <div><b>BOUNDARYCAM</b><span>public audience and inspection surface</span></div>
-    <div><b>INVOCORDER</b><span>machine-action evidence recorder</span></div>
-    <div><b>VERIFRAX</b><span>verification and completion perimeter</span></div>
-    <div><b>SPEEDKIT</b><span>public registry and control engine</span></div>
-  </div>
-</section>
-
-<footer>
-  <strong>BOUNDARYCAM</strong><br>
-  What crossed the boundary?
-</footer>
-
-
+    <section class="panel split">
+      <div>
+        <p class="eyebrow">Public objects</p>
+        <h2>Control surface is machine-readable.</h2>
+        <ul class="object-list">
+          <li><a href="boundarycam-manifest.json">BOUNDARYCAM public manifest</a></li>
+          <li><a href="public-control.json">Public control object</a></li>
+          <li><a href="boundarycam-completion.json">Product-control completion</a></li>
+          <li><a href="data/surfaces.json">Surface index</a></li>
+          <li><a href="data/examples.json">Example frames</a></li>
+        </ul>
+      </div>
+      <div>
+        <p class="eyebrow">Position</p>
+        <h2>Not AI trust. Boundary visibility.</h2>
+        <p>If it touched the world, it needs a boundary frame.</p>
+      </div>
+    </section>
   </main>
 
-  <script src="app.js"></script>
-
+  <footer class="shell footer">
+    <span>qxvi / BOUNDARYCAM</span>
+    <span>What crossed the boundary?</span>
+  </footer>
 </body>
 </html>

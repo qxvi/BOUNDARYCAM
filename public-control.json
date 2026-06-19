@@ -1,8 +1,8 @@
 {
   "object_type": "BOUNDARYCAM_PUBLIC_CONTROL",
-  "version": "0.3.0",
-  "state": "BOUNDARYCAM_PRODUCT_CONTROL_STACK_COMPLETE",
-  "generated_at": "2026-06-19T21:33:17+00:00",
+  "version": "0.4.0",
+  "state": "BOUNDARYCAM_INTERACTIVE_BOUNDARY_CONSOLE_OPEN",
+  "generated_at": "2026-06-19T21:58:19+00:00",
   "product": "BOUNDARYCAM",
   "public_only": true,
   "private_remaining": 0,
@@ -31,5 +31,7 @@
     "VERIFRAX": "verification and completion perimeter",
     "SPEEDKIT": "public registry and control engine"
   },
-  "completion_object": "boundarycam-completion.json"
+  "completion_object": "boundarycam-completion.json",
+  "interactive_console": true,
+  "browser_side_frame_builder": true
 }

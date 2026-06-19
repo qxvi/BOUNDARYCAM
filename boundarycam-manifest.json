@@ -1,8 +1,8 @@
 {
   "object_type": "BOUNDARYCAM_PUBLIC_MANIFEST",
-  "version": "0.3.0",
-  "state": "BOUNDARYCAM_PRODUCT_CONTROL_STACK_COMPLETE",
-  "generated_at": "2026-06-19T21:33:17+00:00",
+  "version": "0.4.0",
+  "state": "BOUNDARYCAM_INTERACTIVE_BOUNDARY_CONSOLE_OPEN",
+  "generated_at": "2026-06-19T21:58:19+00:00",
   "name": "BOUNDARYCAM",
   "tagline": "The camera for machine action.",
   "primary_question": "What crossed the boundary?",
@@ -20,7 +20,8 @@
     "schemas/public-control.schema.json",
     "schemas/boundarycam-completion.schema.json"
   ],
-  "release_tag": "boundarycam-v0.3.0-product-control-completion",
+  "release_tag": "boundarycam-v0.4.0-interactive-boundary-console",
   "public_only": true,
-  "private_remaining": 0
+  "private_remaining": 0,
+  "interactive_console": "https://qxvi.github.io/BOUNDARYCAM/pages/capture.html"
 }

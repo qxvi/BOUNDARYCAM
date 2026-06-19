@@ -1,7 +1,7 @@
 {
   "object_type": "BOUNDARYCAM_SURFACE_INDEX",
-  "version": "0.3.0",
-  "generated_at": "2026-06-19T21:33:17+00:00",
+  "version": "0.4.0",
+  "generated_at": "2026-06-19T21:58:19+00:00",
   "surface_count": 10,
   "surfaces": [
     {
@@ -64,5 +64,7 @@
       "url": "https://qxvi.github.io/BOUNDARYCAM/data/surfaces.json",
       "role": "surface index"
     }
-  ]
+  ],
+  "state": "BOUNDARYCAM_INTERACTIVE_BOUNDARY_CONSOLE_OPEN",
+  "interactive_console": "https://qxvi.github.io/BOUNDARYCAM/pages/capture.html"
 }

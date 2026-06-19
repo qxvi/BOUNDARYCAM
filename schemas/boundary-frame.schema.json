@@ -1,10 +1,11 @@
 {
-  "$schema": "[https://json-schema.org/draft/2020-12/schema](https://json-schema.org/draft/2020-12/schema)",
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
   "title": "BOUNDARYCAM Boundary Frame",
   "type": "object",
   "required": [
-    "id",
-    "title",
+    "object_type",
+    "version",
+    "primary_question",
     "actor",
     "action",
     "target",
@@ -15,15 +16,22 @@
     "recognition",
     "recourse",
     "closure",
-    "status",
-    "question"
+    "public_only"
   ],
   "properties": {
-    "id": {
-      "type": "string",
-      "pattern": "^BCAM-[0-9]{3}$"
+    "object_type": {
+      "type": "string"
     },
-    "title": {
+    "version": {
+      "type": "string"
+    },
+    "generated_at": {
+      "type": "string"
+    },
+    "primary_question": {
+      "type": "string"
+    },
+    "frame_id": {
       "type": "string"
     },
     "actor": {
@@ -56,17 +64,8 @@
     "closure": {
       "type": "string"
     },
-    "status": {
-      "type": "string",
-      "enum": [
-        "BOUNDARY INCOMPLETE",
-        "CONTROLLED",
-        "CLOSED"
-      ]
-    },
-    "question": {
-      "type": "string"
+    "public_only": {
+      "type": "boolean"
     }
-  },
-  "additionalProperties": false
+  }
 }

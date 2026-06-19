@@ -1,39 +1,55 @@
 <!doctype html>
-
 <html lang="en">
 <head>
   <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width,initial-scale=1">
-  <title>Capture · BOUNDARYCAM</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Capture — BOUNDARYCAM</title>
+  <meta name="description" content="Create a public machine-action Boundary Frame.">
   <link rel="stylesheet" href="../styles.css">
 </head>
 <body>
-  <main>
-    <nav class="nav">
-      <a href="../">BOUNDARYCAM</a>
-      <a href="capture.html">Capture</a>
-      <a href="frames.html">Frames</a>
-      <a href="stack.html">Stack</a>
-      <a href="about.html">About</a>
+  <header class="shell subhero">
+    <nav class="topbar">
+      <a class="mark" href="../">BOUNDARYCAM</a>
+      <div class="navlinks">
+        <a href="capture.html">Capture</a>
+        <a href="frames.html">Frames</a>
+        <a href="stack.html">Stack</a>
+        <a href="about.html">About</a>
+      </div>
     </nav>
+    <p class="eyebrow">Interactive Boundary Console</p>
+    <h1>Capture an action.</h1>
+    <p class="lead">What crossed the boundary?</p>
+  </header>
 
+  <main class="shell console-layout">
+    <section class="console-form panel">
+      <label>Actor<input id="actor" value="agent.workflow.runner"></label>
+      <label>Action<input id="action" value="submitted external form"></label>
+      <label>Target<input id="target" value="public endpoint / customer-facing system"></label>
+      <label>Authority<input id="authority" value="declared capability admission"></label>
+      <label>Execution<input id="execution" value="tool call completed"></label>
+      <label>Evidence<input id="evidence" value="hash, timestamp, replay pointer, public receipt"></label>
+      <label>Replay<input id="replay" value="cold replay path available"></label>
+      <label>Recognition<input id="recognition" value="boundary frame acknowledged"></label>
+      <label>Recourse<input id="recourse" value="challenge, rollback, or review path declared"></label>
+      <label>Closure<input id="closure" value="completion status explicit"></label>
+      <div class="actions">
+        <button class="button primary" id="buildFrame" type="button">Build Boundary Frame</button>
+        <button class="button" id="loadExample" type="button">Load example</button>
+        <button class="button" id="copyFrame" type="button">Copy JSON</button>
+        <button class="button" id="downloadFrame" type="button">Download JSON</button>
+      </div>
+      <p class="small" id="consoleStatus">Ready.</p>
+    </section>
 
-<section class="hero small">
-  <div class="mark">CAPTURE</div>
-  <h1>What crossed the boundary?</h1>
-  <p class="lead">Select a machine action and inspect its boundary condition.</p>
-</section>
-
-<section class="capture-panel">
-  <label>Actor <input id="actor" value="browser-agent"></label>
-  <label>Action <input id="action" value="submitted form"></label>
-  <label>Target <input id="target" value="external website"></label>
-  <button id="captureBtn">Generate Boundary Frame</button>
-  <pre id="captureOut"></pre>
-</section>
-
-
+    <section class="panel output-panel">
+      <p class="eyebrow">Live frame output</p>
+      <pre id="frameOutput" class="json-output"></pre>
+    </section>
   </main>
+
   <script src="../app.js"></script>
 </body>
 </html>
