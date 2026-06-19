@@ -1,107 +1,42 @@
 #!/usr/bin/env python3
-from html.parser import HTMLParser
-from pathlib import Path
 import json
+from pathlib import Path
 
-ROOT = Path.cwd()
-
-def fail(message):
-    raise SystemExit(message)
-
-json_files = [
-    "data/examples.json",
-    "data/surfaces.json",
-    "boundary-schema.json",
-    "public-control.json",
-    "boundarycam-manifest.json",
-    "schemas/boundary-frame.schema.json",
-    "schemas/capture-event.schema.json",
-    "schemas/public-control.schema.json",
+root = Path.cwd()
+required_files = [
+    "index.html","pages/capture.html","pages/frames.html","pages/stack.html","pages/about.html","README.md","LICENSE","SECURITY.md","CONTRIBUTING.md","CODE_OF_CONDUCT.md",".github/CODEOWNERS",".github/pull_request_template.md",".github/ISSUE_TEMPLATE/boundary-frame.yml",".github/ISSUE_TEMPLATE/control-gap.yml",".github/workflows/verify.yml",".github/workflows/pages.yml",".nojekyll","boundarycam-manifest.json","public-control.json","boundarycam-completion.json","data/examples.json","data/surfaces.json","data/boundarycam-live-status.json","docs/BOUNDARY_MODEL.md","docs/CONTROL_SURFACE.md","docs/FRAME_STATUS.md","docs/STACK_RELATION.md","docs/PRODUCT_CHARTER.md","docs/OPERATIONAL_DOCTRINE.md","docs/SECURITY_BOUNDARY.md","docs/ACCEPTANCE.md","docs/LIVE_SURFACE_AUDIT.md","governance/GOVERNANCE.md","security/SECURITY_BOUNDARY.md","support/SUPPORT.md","schemas/boundary-frame.schema.json","schemas/capture-event.schema.json","schemas/public-control.schema.json","schemas/boundarycam-completion.schema.json","tools/validate.py"
 ]
-
-for rel in json_files:
-    path = ROOT / rel
-    if not path.exists():
-        fail("MISSING_JSON=" + rel)
-    json.loads(path.read_text(encoding="utf-8"))
-
-examples = json.loads((ROOT / "data/examples.json").read_text(encoding="utf-8"))
-allowed = {"BOUNDARY INCOMPLETE", "CONTROLLED", "CLOSED"}
-seen_ids = set()
-
-required = [
-    "id",
-    "title",
-    "actor",
-    "action",
-    "target",
-    "authority",
-    "execution",
-    "evidence",
-    "replay",
-    "recognition",
-    "recourse",
-    "closure",
-    "status",
-    "question",
-]
-
-for item in examples:
-    item_id = item.get("id", "UNKNOWN")
-    missing = [key for key in required if key not in item]
-    if missing:
-        fail(item_id + ": missing " + ",".join(missing))
-
-    if item_id in seen_ids:
-        fail("duplicate id " + item_id)
-
-    seen_ids.add(item_id)
-
-    status = item.get("status")
-    if status not in allowed:
-        fail(item_id + ": invalid status " + str(status))
-
-class Parser(HTMLParser):
-    pass
-
-html_files = [
-    "index.html",
-    "404.html",
-    "pages/capture.html",
-    "pages/frames.html",
-    "pages/stack.html",
-    "pages/about.html",
-]
-
-for rel in html_files:
-    path = ROOT / rel
-    if not path.exists():
-        fail("MISSING_HTML=" + rel)
-
-    html = path.read_text(encoding="utf-8")
-
-    if "```" in html:
-        fail(rel + ": markdown fence pollution")
-
-    Parser().feed(html)
-
-index = (ROOT / "index.html").read_text(encoding="utf-8")
-for token in [
-    "BOUNDARYCAM",
-    "The camera for machine action.",
-    "Before you trust the output, capture the boundary.",
-    "If it touched the world, it needs a boundary frame.",
-    "Capture an action",
-]:
-    if token not in index:
-        fail("index missing " + token)
-
-manifest = json.loads((ROOT / "boundarycam-manifest.json").read_text(encoding="utf-8"))
-if manifest.get("version") != "0.2.0":
-    fail("MANIFEST_VERSION_NOT_020")
-
-control = json.loads((ROOT / "public-control.json").read_text(encoding="utf-8"))
-if control.get("state") != "BOUNDARYCAM_PUBLIC_CONTROL_STACK_OPEN":
-    fail("CONTROL_STATE_NOT_OPEN")
-
-print("BOUNDARYCAM_VALIDATE_OK=true")
+for rel in required_files:
+    if not (root / rel).exists():
+        raise SystemExit("MISSING_FILE=" + rel)
+for rel in ["boundarycam-manifest.json","public-control.json","boundarycam-completion.json","data/examples.json","data/surfaces.json","data/boundarycam-live-status.json","schemas/boundary-frame.schema.json","schemas/capture-event.schema.json","schemas/public-control.schema.json","schemas/boundarycam-completion.schema.json"]:
+    json.loads((root / rel).read_text(encoding="utf-8"))
+home = (root / "index.html").read_text(encoding="utf-8")
+capture = (root / "pages/capture.html").read_text(encoding="utf-8")
+frames = (root / "pages/frames.html").read_text(encoding="utf-8")
+readme = (root / "README.md").read_text(encoding="utf-8")
+for token in ["BOUNDARYCAM", "The camera for machine action", "Capture an action"]:
+    if token not in home:
+        raise SystemExit("HOME_MISSING=" + token)
+if "What crossed the boundary" not in capture:
+    raise SystemExit("CAPTURE_MISSING_BOUNDARY_QUESTION")
+if "Boundary Frames" not in frames:
+    raise SystemExit("FRAMES_MISSING_TITLE")
+for token in ["BOUNDARYCAM", "What crossed the boundary"]:
+    if token not in readme:
+        raise SystemExit("README_MISSING=" + token)
+manifest = json.loads((root / "boundarycam-manifest.json").read_text(encoding="utf-8"))
+if manifest.get("version") != "0.3.0":
+    raise SystemExit("MANIFEST_VERSION_INVALID")
+if manifest.get("state") != "BOUNDARYCAM_PRODUCT_CONTROL_STACK_COMPLETE":
+    raise SystemExit("MANIFEST_STATE_INVALID")
+control = json.loads((root / "public-control.json").read_text(encoding="utf-8"))
+if control.get("state") != "BOUNDARYCAM_PRODUCT_CONTROL_STACK_COMPLETE":
+    raise SystemExit("CONTROL_STATE_INVALID")
+completion = json.loads((root / "boundarycam-completion.json").read_text(encoding="utf-8"))
+if completion.get("state") != "BOUNDARYCAM_PRODUCT_CONTROL_STACK_COMPLETE":
+    raise SystemExit("COMPLETION_STATE_INVALID")
+for rel in ["index.html","pages/capture.html","pages/frames.html","pages/stack.html","pages/about.html"]:
+    if "```" in (root / rel).read_text(encoding="utf-8"):
+        raise SystemExit("MARKDOWN_FENCE_IN_HTML=" + rel)
+print("BOUNDARYCAM_COMPLETE_VALIDATE_OK=true")

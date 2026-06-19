@@ -1,24 +1,26 @@
 {
   "object_type": "BOUNDARYCAM_PUBLIC_MANIFEST",
-  "version": "0.2.0",
-  "repo": "[https://github.com/qxvi/BOUNDARYCAM](https://github.com/qxvi/BOUNDARYCAM)",
-  "pages": "[https://qxvi.github.io/BOUNDARYCAM](https://qxvi.github.io/BOUNDARYCAM)",
-  "release_tag": "boundarycam-v0.2.0-control-stack",
-  "status": "PUBLIC_CONTROL_STACK_OPEN",
-  "public_only": true,
-  "private_remaining": 0,
-  "primary_question": "What crossed the boundary?",
+  "version": "0.3.0",
+  "state": "BOUNDARYCAM_PRODUCT_CONTROL_STACK_COMPLETE",
+  "generated_at": "2026-06-19T21:33:17+00:00",
+  "name": "BOUNDARYCAM",
   "tagline": "The camera for machine action.",
-  "routes": [
-    "/",
-    "/pages/capture.html",
-    "/pages/frames.html",
-    "/pages/stack.html",
-    "/pages/about.html",
-    "/public-control.json",
-    "/boundarycam-manifest.json",
-    "/schemas/boundary-frame.schema.json",
-    "/data/examples.json",
-    "/data/surfaces.json"
-  ]
+  "primary_question": "What crossed the boundary?",
+  "repo": "https://github.com/qxvi/BOUNDARYCAM",
+  "pages": "https://qxvi.github.io/BOUNDARYCAM",
+  "capture": "https://qxvi.github.io/BOUNDARYCAM/pages/capture.html",
+  "frames": "https://qxvi.github.io/BOUNDARYCAM/pages/frames.html",
+  "stack": "https://qxvi.github.io/BOUNDARYCAM/pages/stack.html",
+  "about": "https://qxvi.github.io/BOUNDARYCAM/pages/about.html",
+  "completion_object": "boundarycam-completion.json",
+  "public_control": "public-control.json",
+  "schemas": [
+    "schemas/boundary-frame.schema.json",
+    "schemas/capture-event.schema.json",
+    "schemas/public-control.schema.json",
+    "schemas/boundarycam-completion.schema.json"
+  ],
+  "release_tag": "boundarycam-v0.3.0-product-control-completion",
+  "public_only": true,
+  "private_remaining": 0
 }

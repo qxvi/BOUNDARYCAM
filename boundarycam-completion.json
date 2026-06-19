@@ -1,0 +1,68 @@
+{
+  "object_type": "BOUNDARYCAM_PRODUCT_CONTROL_COMPLETION",
+  "version": "0.3.0",
+  "state": "BOUNDARYCAM_PRODUCT_CONTROL_STACK_COMPLETE",
+  "generated_at": "2026-06-19T21:33:17+00:00",
+  "public_only": true,
+  "private_remaining": 0,
+  "primary_question": "What crossed the boundary?",
+  "product": "BOUNDARYCAM",
+  "tagline": "The camera for machine action.",
+  "killer_phrase": "If it touched the world, it needs a boundary frame.",
+  "completion_claim": "BOUNDARYCAM public product/control stack is complete for current v0.3.0 surface, schema, governance, validation, and release inventory.",
+  "repo": "https://github.com/qxvi/BOUNDARYCAM",
+  "pages": "https://qxvi.github.io/BOUNDARYCAM",
+  "release_tag": "boundarycam-v0.3.0-product-control-completion",
+  "required_surfaces": [
+    "index.html",
+    "pages/capture.html",
+    "pages/frames.html",
+    "pages/stack.html",
+    "pages/about.html"
+  ],
+  "required_control_objects": [
+    "boundarycam-manifest.json",
+    "public-control.json",
+    "boundarycam-completion.json",
+    "data/examples.json",
+    "data/surfaces.json",
+    "data/boundarycam-live-status.json",
+    "schemas/boundary-frame.schema.json",
+    "schemas/capture-event.schema.json",
+    "schemas/public-control.schema.json",
+    "schemas/boundarycam-completion.schema.json"
+  ],
+  "required_docs": [
+    "docs/BOUNDARY_MODEL.md",
+    "docs/CONTROL_SURFACE.md",
+    "docs/FRAME_STATUS.md",
+    "docs/STACK_RELATION.md",
+    "docs/PRODUCT_CHARTER.md",
+    "docs/OPERATIONAL_DOCTRINE.md",
+    "docs/SECURITY_BOUNDARY.md",
+    "docs/ACCEPTANCE.md",
+    "docs/LIVE_SURFACE_AUDIT.md"
+  ],
+  "required_repo_controls": [
+    "README.md",
+    "LICENSE",
+    "SECURITY.md",
+    "CONTRIBUTING.md",
+    "CODE_OF_CONDUCT.md",
+    ".github/CODEOWNERS",
+    ".github/pull_request_template.md",
+    ".github/ISSUE_TEMPLATE/boundary-frame.yml",
+    ".github/ISSUE_TEMPLATE/control-gap.yml",
+    ".github/workflows/verify.yml",
+    ".github/workflows/pages.yml",
+    "tools/validate.py",
+    "tools/live-smoke.sh"
+  ],
+  "stack_relation": {
+    "qxvi": "visual and public interface layer",
+    "BOUNDARYCAM": "public audience and inspection surface",
+    "INVOCORDER": "machine-action evidence recorder",
+    "VERIFRAX": "verification and completion perimeter",
+    "SPEEDKIT": "public registry and control engine"
+  }
+}

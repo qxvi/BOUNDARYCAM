@@ -1,0 +1,47 @@
+{
+  "object_type": "BOUNDARYCAM_LIVE_STATUS",
+  "version": "0.3.0",
+  "generated_at": "2026-06-19T21:33:17+00:00",
+  "repo": "https://github.com/qxvi/BOUNDARYCAM",
+  "pages": "https://qxvi.github.io/BOUNDARYCAM",
+  "manifest": "https://qxvi.github.io/BOUNDARYCAM/boundarycam-manifest.json",
+  "capture": "https://qxvi.github.io/BOUNDARYCAM/pages/capture.html",
+  "frames": "https://qxvi.github.io/BOUNDARYCAM/pages/frames.html",
+  "stack": "https://qxvi.github.io/BOUNDARYCAM/pages/stack.html",
+  "pages_enabled": true,
+  "pages_build_type": "workflow",
+  "https_enforced": true,
+  "release_count": 2,
+  "workflow_count": 2,
+  "branch_count": 1,
+  "tag_count": 2,
+  "latest_release": {
+    "isDraft": false,
+    "isPrerelease": false,
+    "name": "BOUNDARYCAM v0.2.0 Public Control Stack",
+    "publishedAt": "2026-06-19T21:03:49Z",
+    "tagName": "boundarycam-v0.2.0-control-stack",
+    "url": "https://github.com/qxvi/BOUNDARYCAM/releases/tag/boundarycam-v0.2.0-control-stack"
+  },
+  "workflows": [
+    {
+      "id": 298530173,
+      "name": "pages",
+      "path": ".github/workflows/pages.yml",
+      "state": "active"
+    },
+    {
+      "id": 299087795,
+      "name": "verify",
+      "path": ".github/workflows/verify.yml",
+      "state": "active"
+    }
+  ],
+  "branches": [
+    "main"
+  ],
+  "tags": [
+    "boundarycam-v0.2.0-control-stack",
+    "boundarycam-v0.1.0-public-surface"
+  ]
+}

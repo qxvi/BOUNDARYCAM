@@ -1,0 +1,19 @@
+name: Boundary frame
+description: Request or describe a BOUNDARYCAM boundary frame
+title: "[BOUNDARY FRAME] "
+labels: ["boundary-frame"]
+body:
+  - type: textarea
+    id: action
+    attributes:
+      label: Machine action
+      description: What machine action touched the world?
+    validations:
+      required: true
+  - type: textarea
+    id: boundary
+    attributes:
+      label: Boundary
+      description: What crossed the boundary?
+    validations:
+      required: true

@@ -1,0 +1,76 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "BOUNDARYCAM Product Control Completion",
+  "type": "object",
+  "required": [
+    "object_type",
+    "version",
+    "state",
+    "public_only",
+    "private_remaining",
+    "primary_question",
+    "product",
+    "tagline",
+    "completion_claim",
+    "repo",
+    "pages",
+    "required_surfaces",
+    "required_control_objects",
+    "required_docs",
+    "required_repo_controls",
+    "stack_relation"
+  ],
+  "properties": {
+    "object_type": {
+      "type": "string"
+    },
+    "version": {
+      "type": "string"
+    },
+    "state": {
+      "type": "string"
+    },
+    "generated_at": {
+      "type": "string"
+    },
+    "public_only": {
+      "type": "boolean"
+    },
+    "private_remaining": {
+      "type": "integer"
+    },
+    "primary_question": {
+      "type": "string"
+    },
+    "product": {
+      "type": "string"
+    },
+    "tagline": {
+      "type": "string"
+    },
+    "completion_claim": {
+      "type": "string"
+    },
+    "repo": {
+      "type": "string"
+    },
+    "pages": {
+      "type": "string"
+    },
+    "required_surfaces": {
+      "type": "array"
+    },
+    "required_control_objects": {
+      "type": "array"
+    },
+    "required_docs": {
+      "type": "array"
+    },
+    "required_repo_controls": {
+      "type": "array"
+    },
+    "stack_relation": {
+      "type": "object"
+    }
+  }
+}

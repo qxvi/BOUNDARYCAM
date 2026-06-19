@@ -1,0 +1,12 @@
+name: Control gap
+description: Report a missing public control object, route, schema, or manifest
+title: "[CONTROL GAP] "
+labels: ["control-gap"]
+body:
+  - type: textarea
+    id: gap
+    attributes:
+      label: Gap
+      description: What is missing or unclear?
+    validations:
+      required: true

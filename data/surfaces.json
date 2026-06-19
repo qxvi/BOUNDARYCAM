@@ -1,54 +1,68 @@
 {
   "object_type": "BOUNDARYCAM_SURFACE_INDEX",
-  "public_only": true,
+  "version": "0.3.0",
+  "generated_at": "2026-06-19T21:33:17+00:00",
+  "surface_count": 10,
   "surfaces": [
     {
-      "id": "SURF-001",
-      "name": "Home",
-      "path": "/BOUNDARYCAM/",
+      "id": "BCAM-SURF-001",
+      "type": "HOME",
+      "url": "https://qxvi.github.io/BOUNDARYCAM/",
       "role": "public product entry"
     },
     {
-      "id": "SURF-002",
-      "name": "Capture",
-      "path": "/BOUNDARYCAM/pages/capture.html",
-      "role": "boundary question entry"
+      "id": "BCAM-SURF-002",
+      "type": "CAPTURE",
+      "url": "https://qxvi.github.io/BOUNDARYCAM/pages/capture.html",
+      "role": "boundary capture interface"
     },
     {
-      "id": "SURF-003",
-      "name": "Frames",
-      "path": "/BOUNDARYCAM/pages/frames.html",
-      "role": "machine-action frame gallery"
+      "id": "BCAM-SURF-003",
+      "type": "FRAMES",
+      "url": "https://qxvi.github.io/BOUNDARYCAM/pages/frames.html",
+      "role": "boundary frame gallery"
     },
     {
-      "id": "SURF-004",
-      "name": "Stack",
-      "path": "/BOUNDARYCAM/pages/stack.html",
+      "id": "BCAM-SURF-004",
+      "type": "STACK",
+      "url": "https://qxvi.github.io/BOUNDARYCAM/pages/stack.html",
       "role": "stack relation explainer"
     },
     {
-      "id": "SURF-005",
-      "name": "About",
-      "path": "/BOUNDARYCAM/pages/about.html",
-      "role": "public doctrine explainer"
+      "id": "BCAM-SURF-005",
+      "type": "ABOUT",
+      "url": "https://qxvi.github.io/BOUNDARYCAM/pages/about.html",
+      "role": "public product description"
     },
     {
-      "id": "SURF-006",
-      "name": "Public control",
-      "path": "/BOUNDARYCAM/public-control.json",
-      "role": "machine-readable control object"
+      "id": "BCAM-SURF-006",
+      "type": "MANIFEST",
+      "url": "https://qxvi.github.io/BOUNDARYCAM/boundarycam-manifest.json",
+      "role": "machine-readable manifest"
     },
     {
-      "id": "SURF-007",
-      "name": "Manifest",
-      "path": "/BOUNDARYCAM/boundarycam-manifest.json",
-      "role": "public manifest"
+      "id": "BCAM-SURF-007",
+      "type": "CONTROL",
+      "url": "https://qxvi.github.io/BOUNDARYCAM/public-control.json",
+      "role": "public control object"
     },
     {
-      "id": "SURF-008",
-      "name": "Boundary schema",
-      "path": "/BOUNDARYCAM/schemas/boundary-frame.schema.json",
-      "role": "frame schema"
+      "id": "BCAM-SURF-008",
+      "type": "COMPLETION",
+      "url": "https://qxvi.github.io/BOUNDARYCAM/boundarycam-completion.json",
+      "role": "completion object"
+    },
+    {
+      "id": "BCAM-SURF-009",
+      "type": "EXAMPLES",
+      "url": "https://qxvi.github.io/BOUNDARYCAM/data/examples.json",
+      "role": "example frame data"
+    },
+    {
+      "id": "BCAM-SURF-010",
+      "type": "SURFACES",
+      "url": "https://qxvi.github.io/BOUNDARYCAM/data/surfaces.json",
+      "role": "surface index"
     }
   ]
 }
