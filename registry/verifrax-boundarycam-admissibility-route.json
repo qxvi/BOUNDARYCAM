@@ -1,0 +1,15 @@
+{
+  "object_type": "BOUNDARYCAM_ROUTE_EXECUTION",
+  "version": "0.9.0",
+  "state": "BOUNDARYCAM_VERIFRAX_ADMISSIBILITY_ROUTE_OPEN",
+  "generated_at": "2026-06-20T07:20:03+00:00",
+  "route_id": "ROUTE-002-VERIFRAX-BOUNDARYCAM",
+  "contract": "registry/contracts/verifrax-boundarycam-admissibility-vocabulary.json",
+  "schema": "schemas/verifrax-admissibility-report.schema.json",
+  "module": "boundarycam_runtime/admissibility.py",
+  "tool": "tools/check_admissibility.py",
+  "docs": "docs/cross-stack/VERIFRAX_TO_BOUNDARYCAM_ADMISSIBILITY_ROUTE.md",
+  "release_tag": "boundarycam-v0.9.0-verifrax-admissibility-route",
+  "route_status": "open",
+  "route_power": "Verifrax admissibility vocabulary now types BOUNDARYCAM public inspection limits."
+}

@@ -1,8 +1,8 @@
 {
   "object_type": "BOUNDARYCAM_PUBLIC_MANIFEST",
-  "version": "0.8.0",
-  "state": "BOUNDARYCAM_INVOCORDER_CAPTURE_ROUTE_OPEN",
-  "generated_at": "2026-06-20T06:49:39+00:00",
+  "version": "0.9.0",
+  "state": "BOUNDARYCAM_VERIFRAX_ADMISSIBILITY_ROUTE_OPEN",
+  "generated_at": "2026-06-20T07:20:03+00:00",
   "name": "BOUNDARYCAM",
   "tagline": "The camera for machine action.",
   "primary_question": "What crossed the boundary?",
@@ -20,7 +20,7 @@
     "schemas/public-control.schema.json",
     "schemas/boundarycam-completion.schema.json"
   ],
-  "release_tag": "boundarycam-v0.8.0-invocorder-capture-route",
+  "release_tag": "boundarycam-v0.9.0-verifrax-admissibility-route",
   "public_only": true,
   "private_remaining": 0,
   "interactive_console": "https://qxvi.github.io/BOUNDARYCAM/pages/capture.html",
@@ -35,5 +35,7 @@
   "whole_stack_integrity": "boundarycam-whole-stack-integrity.json",
   "checksum_index": "audit/boundarycam-whole-stack-checksums.json",
   "invocorder_capture_route": "registry/invocorder-boundarycam-route.json",
-  "invocorder_capture_contract": "registry/contracts/invocorder-boundarycam-capture-contract.json"
+  "invocorder_capture_contract": "registry/contracts/invocorder-boundarycam-capture-contract.json",
+  "verifrax_admissibility_route": "registry/verifrax-boundarycam-admissibility-route.json",
+  "verifrax_admissibility_vocabulary": "registry/contracts/verifrax-boundarycam-admissibility-vocabulary.json"
 }

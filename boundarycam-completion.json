@@ -1,8 +1,8 @@
 {
   "object_type": "BOUNDARYCAM_PRODUCT_CONTROL_COMPLETION",
-  "version": "0.8.0",
-  "state": "BOUNDARYCAM_INVOCORDER_CAPTURE_ROUTE_OPEN",
-  "generated_at": "2026-06-20T06:49:39+00:00",
+  "version": "0.9.0",
+  "state": "BOUNDARYCAM_VERIFRAX_ADMISSIBILITY_ROUTE_OPEN",
+  "generated_at": "2026-06-20T07:20:03+00:00",
   "public_only": true,
   "private_remaining": 0,
   "primary_question": "What crossed the boundary?",
@@ -12,7 +12,7 @@
   "completion_claim": "BOUNDARYCAM public product/control stack is complete for current v0.3.0 surface, schema, governance, validation, and release inventory.",
   "repo": "https://github.com/qxvi/BOUNDARYCAM",
   "pages": "https://qxvi.github.io/BOUNDARYCAM",
-  "release_tag": "boundarycam-v0.8.0-invocorder-capture-route",
+  "release_tag": "boundarycam-v0.9.0-verifrax-admissibility-route",
   "required_surfaces": [
     "index.html",
     "pages/capture.html",
@@ -73,5 +73,8 @@
   "checksum_index": "audit/boundarycam-whole-stack-checksums.json",
   "invocorder_capture_route": "registry/invocorder-boundarycam-route.json",
   "invocorder_capture_contract": "registry/contracts/invocorder-boundarycam-capture-contract.json",
-  "adapter": "tools/invocorder_to_boundarycam.py"
+  "adapter": "tools/invocorder_to_boundarycam.py",
+  "verifrax_admissibility_route": "registry/verifrax-boundarycam-admissibility-route.json",
+  "verifrax_admissibility_vocabulary": "registry/contracts/verifrax-boundarycam-admissibility-vocabulary.json",
+  "admissibility_module": "boundarycam_runtime/admissibility.py"
 }

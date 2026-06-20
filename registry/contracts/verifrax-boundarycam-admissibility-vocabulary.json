@@ -1,0 +1,55 @@
+{
+  "object_type": "BOUNDARYCAM_VERIFRAX_ADMISSIBILITY_VOCABULARY",
+  "version": "0.9.0",
+  "state": "BOUNDARYCAM_VERIFRAX_ADMISSIBILITY_ROUTE_OPEN",
+  "generated_at": "2026-06-20T07:20:03+00:00",
+  "public_only": true,
+  "route": "VERIFRAX -> BOUNDARYCAM",
+  "route_id": "ROUTE-002-VERIFRAX-BOUNDARYCAM",
+  "purpose": "Use Verifrax as admissibility, authority, replay, and recourse vocabulary for BOUNDARYCAM public inspection objects.",
+  "primary_question": "What crossed the boundary?",
+  "non_claims": [
+    "BOUNDARYCAM does not become VERIFRAX.",
+    "BOUNDARYCAM does not become legal proof.",
+    "BOUNDARYCAM does not decide truth.",
+    "BOUNDARYCAM applies typed admissibility vocabulary to public boundary inspection objects."
+  ],
+  "admissibility_terms": {
+    "admissible_for_public_inspection": "The object has enough public boundary facts to be inspected without claiming legal truth.",
+    "insufficient_authority": "The authority field is missing, weak, local-only, or unbound.",
+    "insufficient_execution": "The execution path is missing or cannot be described as a boundary action.",
+    "insufficient_evidence": "The evidence field is empty, private-only, or not replay-supporting.",
+    "insufficient_replay": "The replay field does not give a path for external re-checking.",
+    "insufficient_recognition": "The object does not state how the boundary was recognized.",
+    "insufficient_recourse": "The object does not state how a human or operator can contest/review.",
+    "overclaim": "The object claims proof, legality, identity, custody, or authority beyond what the boundary facts support."
+  },
+  "required_boundary_fields": [
+    "actor",
+    "action",
+    "target",
+    "authority",
+    "execution",
+    "evidence",
+    "replay",
+    "recognition",
+    "recourse",
+    "closure"
+  ],
+  "decision_levels": [
+    "admissible_for_public_inspection",
+    "admissible_with_limits",
+    "inadmissible_for_public_inspection"
+  ],
+  "limits": [
+    "truth_limit",
+    "legal_limit",
+    "identity_limit",
+    "custody_limit",
+    "authority_limit",
+    "runtime_limit",
+    "replay_limit"
+  ],
+  "vocabulary_hash": "2f011de256e2be19eee95390564f65c5f56e501b4fea6667282b676722633e54",
+  "vocabulary_id": "BCAM-VERIFRAX-VOCAB-2F011DE256E2BE19"
+}

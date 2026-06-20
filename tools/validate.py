@@ -3,16 +3,19 @@ import subprocess
 from pathlib import Path
 
 root = Path.cwd()
-state = "BOUNDARYCAM_INVOCORDER_CAPTURE_ROUTE_OPEN"
+state = "BOUNDARYCAM_VERIFRAX_ADMISSIBILITY_ROUTE_OPEN"
 
 required = [
+    "registry/contracts/verifrax-boundarycam-admissibility-vocabulary.json",
+    "registry/contracts/verifrax-admissibility-sample-frame.json",
+    "registry/verifrax-boundarycam-admissibility-route.json",
+    "schemas/verifrax-admissibility-report.schema.json",
+    "boundarycam_runtime/admissibility.py",
+    "tools/check_admissibility.py",
+    "docs/cross-stack/VERIFRAX_TO_BOUNDARYCAM_ADMISSIBILITY_ROUTE.md",
+    "audit/boundarycam-verifrax-admissibility-route-audit.md",
     "registry/contracts/invocorder-boundarycam-capture-contract.json",
-    "registry/contracts/invocorder-sample-capture-event.json",
     "registry/invocorder-boundarycam-route.json",
-    "schemas/invocorder-capture-contract.schema.json",
-    "tools/invocorder_to_boundarycam.py",
-    "docs/cross-stack/INVOCORDER_TO_BOUNDARYCAM_CAPTURE_ROUTE.md",
-    "audit/boundarycam-invocorder-capture-route-audit.md",
     "boundarycam-manifest.json",
     "public-control.json",
     "boundarycam-completion.json",
@@ -25,8 +28,8 @@ for rel in required:
         raise SystemExit("MISSING_FILE=" + rel)
 
 for rel in [
-    "registry/contracts/invocorder-boundarycam-capture-contract.json",
-    "registry/invocorder-boundarycam-route.json",
+    "registry/contracts/verifrax-boundarycam-admissibility-vocabulary.json",
+    "registry/verifrax-boundarycam-admissibility-route.json",
     "boundarycam-manifest.json",
     "public-control.json",
     "boundarycam-completion.json",
@@ -37,15 +40,15 @@ for rel in [
     if obj.get("state") != state:
         raise SystemExit("STATE_INVALID=" + rel)
 
-mapped = subprocess.check_output([
+report = subprocess.check_output([
     "python3",
-    "tools/invocorder_to_boundarycam.py",
-    "registry/contracts/invocorder-sample-capture-event.json"
+    "tools/check_admissibility.py",
+    "registry/contracts/verifrax-admissibility-sample-frame.json"
 ], text=True)
-obj = json.loads(mapped)
-if obj.get("object_type") != "BOUNDARYCAM_CAPTURE_INPUT":
-    raise SystemExit("ADAPTER_OUTPUT_INVALID")
-if obj.get("source") != "INVOCORDER":
-    raise SystemExit("ADAPTER_SOURCE_INVALID")
+obj = json.loads(report)
+if obj.get("object_type") != "BOUNDARYCAM_VERIFRAX_ADMISSIBILITY_REPORT":
+    raise SystemExit("ADMISSIBILITY_REPORT_INVALID")
+if obj.get("decision") != "admissible_for_public_inspection":
+    raise SystemExit("ADMISSIBILITY_DECISION_INVALID")
 
-print("BOUNDARYCAM_V080_INVOCORDER_ROUTE_VALIDATE_OK=true")
+print("BOUNDARYCAM_V090_VERIFRAX_ROUTE_VALIDATE_OK=true")

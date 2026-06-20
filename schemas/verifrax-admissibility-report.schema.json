@@ -1,0 +1,47 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://qxvi.github.io/BOUNDARYCAM/schemas/verifrax-admissibility-report.schema.json",
+  "title": "BOUNDARYCAM Verifrax Admissibility Report",
+  "type": "object",
+  "required": [
+    "object_type",
+    "state",
+    "decision",
+    "limits",
+    "findings"
+  ],
+  "properties": {
+    "object_type": {
+      "const": "BOUNDARYCAM_VERIFRAX_ADMISSIBILITY_REPORT"
+    },
+    "state": {
+      "type": "string"
+    },
+    "decision": {
+      "enum": [
+        "admissible_for_public_inspection",
+        "admissible_with_limits",
+        "inadmissible_for_public_inspection"
+      ]
+    },
+    "limits": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      }
+    },
+    "findings": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      }
+    },
+    "source_object_type": {
+      "type": "string"
+    },
+    "checked_at": {
+      "type": "string"
+    }
+  },
+  "additionalProperties": true
+}
