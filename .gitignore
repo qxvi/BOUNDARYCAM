@@ -4,3 +4,5 @@ __pycache__/
 .venv/
 runtime/*.sqlite3
 runtime/*.sqlite3-*
+*.log
+.DS_Store

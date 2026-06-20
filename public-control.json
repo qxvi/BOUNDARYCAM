@@ -1,8 +1,8 @@
 {
   "object_type": "BOUNDARYCAM_PUBLIC_CONTROL",
-  "version": "0.6.0",
-  "state": "BOUNDARYCAM_EVIDENCE_BUNDLE_CORE_OPEN",
-  "generated_at": "2026-06-19T22:23:53+00:00",
+  "version": "0.7.0",
+  "state": "BOUNDARYCAM_WHOLE_STACK_INTEGRITY_LOCKED",
+  "generated_at": "2026-06-20T05:39:52+00:00",
   "product": "BOUNDARYCAM",
   "public_only": true,
   "private_remaining": 0,
@@ -41,5 +41,7 @@
   "cli": true,
   "docker": true,
   "evidence_bundle_core": true,
-  "release_tag": "boundarycam-v0.6.0-evidence-bundle-core"
+  "release_tag": "boundarycam-v0.7.0-whole-stack-integrity-lock",
+  "whole_stack_integrity_locked": true,
+  "checksum_audit": true
 }

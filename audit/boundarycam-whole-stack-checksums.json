@@ -1,0 +1,325 @@
+{
+  "object_type": "BOUNDARYCAM_WHOLE_STACK_CHECKSUMS",
+  "version": "0.7.0",
+  "state": "BOUNDARYCAM_WHOLE_STACK_INTEGRITY_LOCKED",
+  "generated_at": "2026-06-20T05:39:52+00:00",
+  "file_count": 79,
+  "files": [
+    {
+      "path": ".github/CODEOWNERS",
+      "sha256": "3873d41fdd3e1478e9cfd5c46308f9427d112d7a4e4a8612b61dedcd33966e7f"
+    },
+    {
+      "path": ".github/ISSUE_TEMPLATE/boundary-frame.yml",
+      "sha256": "305928080cb01f3312ccc0d8f9eab29e9e24986d83656280fdbf35fca3672367"
+    },
+    {
+      "path": ".github/ISSUE_TEMPLATE/control-gap.yml",
+      "sha256": "4b26d33dd853f78aa717bcfe7f6cacae703f8d5d453421fbff6699b391b11c2a"
+    },
+    {
+      "path": ".github/pull_request_template.md",
+      "sha256": "414500089125954c1a25d7515bc1585459bcc6c2d81c44d7e2358a7662f33455"
+    },
+    {
+      "path": ".github/workflows/pages.yml",
+      "sha256": "225d789233c90c8d5d1b48a1cb604d3c82d3f7bea67b07595a5736cad71cff96"
+    },
+    {
+      "path": ".github/workflows/verify.yml",
+      "sha256": "0849f536f6eb3cc52b77b6395d9ff87dde2fa5e2136bd3c45d5aa0a0397f6d66"
+    },
+    {
+      "path": ".gitignore",
+      "sha256": "2a742ade24feeeee6c0604a500b51d0608901d31865b6b2b47b3270e01b18ac9"
+    },
+    {
+      "path": ".nojekyll",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "404.html",
+      "sha256": "b6e70551b177b1def796cf87ed5e4476e9a051e0d4fae5420cfb05db7fa6726a"
+    },
+    {
+      "path": "CODE_OF_CONDUCT.md",
+      "sha256": "4fa9afbf46c8f0802f7d71208840d179dac3316b2de50c5b1ec24648a27f3bb5"
+    },
+    {
+      "path": "CONTRIBUTING.md",
+      "sha256": "20db3774703c82a27cacb2ebf9918261bb1842d4d514d126d1c457f935b57f9b"
+    },
+    {
+      "path": "Dockerfile",
+      "sha256": "cceb68e9792ef6ce67c7badd38f3b2267dcc0fca710c3ca51cfd2c93532f3c99"
+    },
+    {
+      "path": "LICENSE",
+      "sha256": "bab710e2313123401fc4751d11a69101e0403d30c53a2f6ef980ffb5ee9b7c43"
+    },
+    {
+      "path": "README.md",
+      "sha256": "d45d6ad8ac9c3039874a94774f62a71dc44259346f054d1276a5ec5b6b5a52f5"
+    },
+    {
+      "path": "SECURITY.md",
+      "sha256": "0024197616ca3a9d327c0cabe9188cd5bd65a15438070c1f667c0a84086ed792"
+    },
+    {
+      "path": "app.js",
+      "sha256": "f696e82c71821cb6744b5a4ac836d80b65bf68b9891a21992faa25c81718d75f"
+    },
+    {
+      "path": "assets/social-card.txt",
+      "sha256": "44a36dd371e0adb502dad54bcd5e5c79ca5624038c7aca0ec57bb6e5849657fb"
+    },
+    {
+      "path": "boundary-schema.json",
+      "sha256": "ff4908f732614348e2d9639ead0bfa137d47941defe81cb3c14404740937dd60"
+    },
+    {
+      "path": "boundarycam-completion.json",
+      "sha256": "27cfd7e2306012b9b247e46323d3afd5e5dd649c97ae84997a9c2a6da52f7800"
+    },
+    {
+      "path": "boundarycam-manifest.json",
+      "sha256": "8de9cddf2a4c37824fe253c1a08e51109a2452ce0aeaa8affbb2ae5093e79c19"
+    },
+    {
+      "path": "boundarycam_runtime/__init__.py",
+      "sha256": "2c12b8ea17aeb6f9f72a6b02aca218bbc4508a46df9e365a8f6c45ad769e0b34"
+    },
+    {
+      "path": "boundarycam_runtime/api.py",
+      "sha256": "bcbbbe41c99b0df8e9a47bb0b40f07166339e241c8273d08f0130bc0091b3747"
+    },
+    {
+      "path": "boundarycam_runtime/bundle.py",
+      "sha256": "5707176f5b48f376587bd70cf3cb2ca431694b204485f15eed4ed650c20879d9"
+    },
+    {
+      "path": "boundarycam_runtime/cli.py",
+      "sha256": "e9476a3c008e03cd808c37e14d304064910a846d05cb9c1afd5419455db48bd6"
+    },
+    {
+      "path": "boundarycam_runtime/merkle.py",
+      "sha256": "8607380e76045c21894bc84a2504ccbe8e846255be1e7b9e78317ba4a0a73ac3"
+    },
+    {
+      "path": "boundarycam_runtime/models.py",
+      "sha256": "f7f4f20157eaf95e0cf16d3f8e32f81c4fa6bf644c0ba9e9e312af3eee3085d9"
+    },
+    {
+      "path": "boundarycam_runtime/store.py",
+      "sha256": "e477c2d813a2468ce866ab1538aad0246ba6cf5eca08d1ed670b612ca3d9adf7"
+    },
+    {
+      "path": "data/boundarycam-live-status.json",
+      "sha256": "cc636bed79258fc3ed6c9aa15f7c123ba923079db252941395585899050c6926"
+    },
+    {
+      "path": "data/examples.json",
+      "sha256": "e908260fbb7933b051ff0e1c9c50208a28b846ac71d9c272fa23ca433c6da0a4"
+    },
+    {
+      "path": "data/live/branches.json",
+      "sha256": "95f224d03bcc41662a3fdb467469a0b42e3c941cda4ce2f47d22a2c6b7e6f41c"
+    },
+    {
+      "path": "data/live/pages.json",
+      "sha256": "4aaae9db0e79e98cb300e4a3571984e8ac774db152570ae5c6916c499b3faf07"
+    },
+    {
+      "path": "data/live/releases.json",
+      "sha256": "837a388812dd694b5ab6c0582f2a5c2e937305f8a1f114c9dd0269915023286e"
+    },
+    {
+      "path": "data/live/repository.json",
+      "sha256": "2a36ad71452b7e0f05e8df39d0ddfed9dfef21e6a34aed88ffde5384d9c16e9c"
+    },
+    {
+      "path": "data/live/tags.json",
+      "sha256": "0bd751638810dff77a8aac3d8e407eb54d1676003c32253be17ff8dce61a7bd6"
+    },
+    {
+      "path": "data/live/workflows.json",
+      "sha256": "42843a9a92c65c5475892bfb4c5b60b8bf6f566e94b4f8fe8ba6be504cc7e029"
+    },
+    {
+      "path": "data/surfaces.json",
+      "sha256": "127ac9906310f71dbbd43b0209cea08b43d36622a9e24dcf479109f31227d946"
+    },
+    {
+      "path": "docker-compose.yml",
+      "sha256": "cbc4007db07622d1befccb227e09aeac49aeed2ed13efcc2db92e0764ef0a2d0"
+    },
+    {
+      "path": "docs/ACCEPTANCE.md",
+      "sha256": "41d290347b8330ef97592485938a2a7260a46405c150275de73be0db96170748"
+    },
+    {
+      "path": "docs/BOUNDARY_MODEL.md",
+      "sha256": "d6221bf6589c564936ea17acd07feb86cd7332188edf82a58b4f00feeb5ef2a0"
+    },
+    {
+      "path": "docs/CONTROL_SURFACE.md",
+      "sha256": "2773245b7f476281ec69c69b14ade3627d0d1bb1fe39ebd1e2f15e2fbd928fc0"
+    },
+    {
+      "path": "docs/FRAME_STATUS.md",
+      "sha256": "e8d43e222d1161460f7cc6dcae04a5e7c1d800d918b0aa8ef32158e11d8fd08c"
+    },
+    {
+      "path": "docs/INTERACTIVE_CONSOLE.md",
+      "sha256": "a6febcde50d87a01a00c40d3cf0d384f3317418ddf87fce7d5f5d7a2504752b2"
+    },
+    {
+      "path": "docs/LIVE_SURFACE_AUDIT.md",
+      "sha256": "eda374978817a691791a479060fe096b8b45b3408c3fcee839275e57d4a4c0c9"
+    },
+    {
+      "path": "docs/OPERATIONAL_DOCTRINE.md",
+      "sha256": "ee8e561b520479195c770b6ee6ab2fc3f3388fa8da9f2d26ab8a23dee62f9624"
+    },
+    {
+      "path": "docs/PRODUCT_CHARTER.md",
+      "sha256": "0c5db661828a0dfd1af3d70a89cd70eb6ae11ee2fbd068b1e223899b4052c7b1"
+    },
+    {
+      "path": "docs/SECURITY_BOUNDARY.md",
+      "sha256": "703ee66668b99b18ca4c5edfdeab7f02c4ce38f27416b99750f9d90fed20eb96"
+    },
+    {
+      "path": "docs/STACK_RELATION.md",
+      "sha256": "4f1c543a093942d19af323cea1fa12843f8658487c6082a7c02f0d1a9096fa38"
+    },
+    {
+      "path": "docs/runtime/API.md",
+      "sha256": "3fe785a621f58cdd82a638641eae85a607ad4b9132339590812effbb80fa86f1"
+    },
+    {
+      "path": "docs/runtime/CLI.md",
+      "sha256": "1179a8fb7d707b35dbd905cfb610d31193002bcfa07b4ba9aaebac1741639cfb"
+    },
+    {
+      "path": "docs/runtime/COLD_VERIFICATION.md",
+      "sha256": "a05c1fa34db5f0b7173a0b879090f4f3e653d0f00cf1710e339fa2c8c6c8f1b7"
+    },
+    {
+      "path": "docs/runtime/EVIDENCE_BUNDLES.md",
+      "sha256": "8774a6d47a1ef5d7ed05134d302c92a15de25d293c883fabd81884c883df663f"
+    },
+    {
+      "path": "docs/runtime/RUNTIME_CORE.md",
+      "sha256": "27b90a4b656083ea8d83d012bf2a6adc440b83b106117b5826cecf15d9c4df8a"
+    },
+    {
+      "path": "docs/runtime/THREAT_MODEL.md",
+      "sha256": "7b817c7ed8cc20960a9b7ae3c842bbcea7c9c94afb80848cb3968870d5a871f3"
+    },
+    {
+      "path": "governance/GOVERNANCE.md",
+      "sha256": "3543fcdfe9ca6eb74e1191bd9ea044f810357351f909cb722618d287eac24e2a"
+    },
+    {
+      "path": "index.html",
+      "sha256": "7434c8e64b64cf103a1b79b344396adc7bcdb1d856d560c6daee2ae34693b33f"
+    },
+    {
+      "path": "pages/about.html",
+      "sha256": "d4f554dea625e834335f25caee1a1e0392794a1662b6ac750210eea9a1589a0b"
+    },
+    {
+      "path": "pages/capture.html",
+      "sha256": "b8ba33333e107f8ac0f301a765d3dd8126a9a494ea6985d771d8bd7d93b9fd8a"
+    },
+    {
+      "path": "pages/frames.html",
+      "sha256": "04e2e7a578833d617b9ce88f5e57e1f0b89b861ddfddf9f98142ef236bad14f2"
+    },
+    {
+      "path": "pages/stack.html",
+      "sha256": "6ec42a98e1dcfae3e9cd86b8d2f440a37dda194aed3a761b9f61069826577c63"
+    },
+    {
+      "path": "public-control.json",
+      "sha256": "be5480ebf649eef9d3d8d4db5252a34818e9acc4a05f87767719294ae61de6be"
+    },
+    {
+      "path": "pyproject.toml",
+      "sha256": "991c9b6de1697b7d0721dba25450e6e8db428a4f7432e2b232898cf71950bb1d"
+    },
+    {
+      "path": "requirements-dev.txt",
+      "sha256": "c0147f3774926958de38d0c51e1305d26a34ed6e3b2eb03135fe7b17256a66d2"
+    },
+    {
+      "path": "requirements.txt",
+      "sha256": "14ebb9be91be47087e0446f2d4e95fdd6b6157e541a1767372c2c2eef9f7f0a7"
+    },
+    {
+      "path": "robots.txt",
+      "sha256": "9c08160745d9ccb9909120126477bbc97bc13f7b8faf6018c46ade5313cb8a4c"
+    },
+    {
+      "path": "runtime/run-api.sh",
+      "sha256": "34ca3d9d41354c3560380f7044dd1fde9e38ac9e12a722f652f8b718bc5a068f"
+    },
+    {
+      "path": "schemas/boundary-frame.schema.json",
+      "sha256": "d2c61261caa0196cfa6d086b84653def5402e178912317d7f63814b6c9f8e8bc"
+    },
+    {
+      "path": "schemas/boundarycam-completion.schema.json",
+      "sha256": "df07d45dc2fe57521eb3b6b88ccd95a97c88c24d58d41c36c9ca9aae315c88cd"
+    },
+    {
+      "path": "schemas/capture-event.schema.json",
+      "sha256": "3cfe673c06f554f8da8c14e6386552d7e0c6e2ff306ee145774af96e48af5ba7"
+    },
+    {
+      "path": "schemas/public-control.schema.json",
+      "sha256": "4301642a5b9873a925b0392dcfc621a00b1a83af6c9eb8716026abe9b978f64a"
+    },
+    {
+      "path": "security/SECURITY_BOUNDARY.md",
+      "sha256": "ca7c900da3d90cede208aa2afd64d4e164d3aa8c1365860521d81ac5b9fc9b51"
+    },
+    {
+      "path": "sitemap.xml",
+      "sha256": "bef2c86d7c485ab54cc22a47e2727bd34dc657106ad60f1ee4467a1ea2452838"
+    },
+    {
+      "path": "styles.css",
+      "sha256": "c40600109f9a75cc918d6c538985931899ad105e8783b5363614501c1ebcba25"
+    },
+    {
+      "path": "support/SUPPORT.md",
+      "sha256": "e981903648fa4cdc8fc3518899c90cd46c1c7205fd0c6bce9a85dcac127afb51"
+    },
+    {
+      "path": "tests/test_bundle.py",
+      "sha256": "99026a6ebbe24a44663934884cc9d31c16a1c688520f939b5079cede5a56c7b6"
+    },
+    {
+      "path": "tests/test_runtime.py",
+      "sha256": "bee706e231616d7f0195791d9d7e0f9cee1109b41b3c9b52843c7db66305c217"
+    },
+    {
+      "path": "tools/bundle-smoke.sh",
+      "sha256": "d1a28a51a9f6e3ee4e19a496d91dd0f41a233dc0fecdb161def06b38992c31f7"
+    },
+    {
+      "path": "tools/live-smoke.sh",
+      "sha256": "1c58d2d16d843dd87dba5bc880095a0a631e19040b5efc3534edfde2c7354618"
+    },
+    {
+      "path": "tools/runtime-smoke.sh",
+      "sha256": "70044184f318d1f8885fef1f9d997a059715f99bd91cf2b7c93bdacb8c834f34"
+    },
+    {
+      "path": "tools/validate.py",
+      "sha256": "d493abbf1dd879be8aa99b5b79c6a570c0fd161321e425d6dff68cea46db812e"
+    }
+  ]
+}

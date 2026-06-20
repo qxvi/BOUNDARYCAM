@@ -1,7 +1,7 @@
 {
   "object_type": "BOUNDARYCAM_SURFACE_INDEX",
-  "version": "0.6.0",
-  "generated_at": "2026-06-19T22:23:53+00:00",
+  "version": "0.7.0",
+  "generated_at": "2026-06-20T05:39:52+00:00",
   "surface_count": 10,
   "surfaces": [
     {
@@ -65,7 +65,7 @@
       "role": "surface index"
     }
   ],
-  "state": "BOUNDARYCAM_EVIDENCE_BUNDLE_CORE_OPEN",
+  "state": "BOUNDARYCAM_WHOLE_STACK_INTEGRITY_LOCKED",
   "interactive_console": "https://qxvi.github.io/BOUNDARYCAM/pages/capture.html",
   "runtime_core": {
     "api": "boundarycam_runtime/api.py",
@@ -74,5 +74,6 @@
     "smoke": "tools/runtime-smoke.sh"
   },
   "evidence_bundle_core": true,
-  "release_tag": "boundarycam-v0.6.0-evidence-bundle-core"
+  "release_tag": "boundarycam-v0.6.0-evidence-bundle-core",
+  "whole_stack_integrity": "boundarycam-whole-stack-integrity.json"
 }
