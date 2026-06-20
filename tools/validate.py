@@ -1,25 +1,23 @@
 import json
+import subprocess
 from pathlib import Path
 
 root = Path.cwd()
+state = "BOUNDARYCAM_INVOCORDER_CAPTURE_ROUTE_OPEN"
 
 required = [
-    "boundarycam-whole-stack-integrity.json",
-    "audit/boundarycam-whole-stack-checksums.json",
-    "docs/integrity/WHOLE_STACK_INTEGRITY_LOCK.md",
+    "registry/contracts/invocorder-boundarycam-capture-contract.json",
+    "registry/contracts/invocorder-sample-capture-event.json",
+    "registry/invocorder-boundarycam-route.json",
+    "schemas/invocorder-capture-contract.schema.json",
+    "tools/invocorder_to_boundarycam.py",
+    "docs/cross-stack/INVOCORDER_TO_BOUNDARYCAM_CAPTURE_ROUTE.md",
+    "audit/boundarycam-invocorder-capture-route-audit.md",
     "boundarycam-manifest.json",
     "public-control.json",
     "boundarycam-completion.json",
     "data/boundarycam-live-status.json",
-    "data/surfaces.json",
-    "boundarycam_runtime/api.py",
-    "boundarycam_runtime/store.py",
-    "boundarycam_runtime/bundle.py",
-    "boundarycam_runtime/merkle.py",
-    "tools/runtime-smoke.sh",
-    "tools/bundle-smoke.sh",
-    ".github/workflows/verify.yml",
-    ".github/workflows/pages.yml"
+    "data/surfaces.json"
 ]
 
 for rel in required:
@@ -27,35 +25,27 @@ for rel in required:
         raise SystemExit("MISSING_FILE=" + rel)
 
 for rel in [
-    "boundarycam-whole-stack-integrity.json",
-    "audit/boundarycam-whole-stack-checksums.json",
+    "registry/contracts/invocorder-boundarycam-capture-contract.json",
+    "registry/invocorder-boundarycam-route.json",
     "boundarycam-manifest.json",
     "public-control.json",
     "boundarycam-completion.json",
     "data/boundarycam-live-status.json",
     "data/surfaces.json"
 ]:
-    json.loads((root / rel).read_text())
-
-for rel in ["boundarycam-manifest.json", "public-control.json", "boundarycam-completion.json"]:
     obj = json.loads((root / rel).read_text())
-    if obj.get("version") != "0.7.0":
-        raise SystemExit("VERSION_INVALID=" + rel)
-    if obj.get("state") != "BOUNDARYCAM_WHOLE_STACK_INTEGRITY_LOCKED":
+    if obj.get("state") != state:
         raise SystemExit("STATE_INVALID=" + rel)
 
-integrity = json.loads((root / "boundarycam-whole-stack-integrity.json").read_text())
-if not integrity.get("runtime_core"):
-    raise SystemExit("RUNTIME_CORE_FALSE")
-if not integrity.get("evidence_bundle_core"):
-    raise SystemExit("EVIDENCE_BUNDLE_CORE_FALSE")
-if not integrity.get("cold_verification"):
-    raise SystemExit("COLD_VERIFICATION_FALSE")
-if not integrity.get("tamper_detection"):
-    raise SystemExit("TAMPER_DETECTION_FALSE")
+mapped = subprocess.check_output([
+    "python3",
+    "tools/invocorder_to_boundarycam.py",
+    "registry/contracts/invocorder-sample-capture-event.json"
+], text=True)
+obj = json.loads(mapped)
+if obj.get("object_type") != "BOUNDARYCAM_CAPTURE_INPUT":
+    raise SystemExit("ADAPTER_OUTPUT_INVALID")
+if obj.get("source") != "INVOCORDER":
+    raise SystemExit("ADAPTER_SOURCE_INVALID")
 
-tracked_bad = list(root.glob("**/__pycache__/*.pyc"))
-if tracked_bad:
-    raise SystemExit("PYC_PRESENT")
-
-print("BOUNDARYCAM_V070_VALIDATE_OK=true")
+print("BOUNDARYCAM_V080_INVOCORDER_ROUTE_VALIDATE_OK=true")

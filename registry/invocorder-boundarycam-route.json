@@ -1,0 +1,14 @@
+{
+  "object_type": "BOUNDARYCAM_ROUTE_EXECUTION",
+  "version": "0.8.0",
+  "state": "BOUNDARYCAM_INVOCORDER_CAPTURE_ROUTE_OPEN",
+  "generated_at": "2026-06-20T06:49:39+00:00",
+  "route_id": "ROUTE-001-INVOCORDER-BOUNDARYCAM",
+  "contract": "registry/contracts/invocorder-boundarycam-capture-contract.json",
+  "schema": "schemas/invocorder-capture-contract.schema.json",
+  "adapter": "tools/invocorder_to_boundarycam.py",
+  "docs": "docs/cross-stack/INVOCORDER_TO_BOUNDARYCAM_CAPTURE_ROUTE.md",
+  "release_tag": "boundarycam-v0.8.0-invocorder-capture-route",
+  "route_status": "open",
+  "route_power": "machine-action recorder power becomes public boundary inspection power"
+}

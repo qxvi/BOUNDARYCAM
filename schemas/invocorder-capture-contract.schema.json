@@ -1,0 +1,61 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://qxvi.github.io/BOUNDARYCAM/schemas/invocorder-capture-contract.schema.json",
+  "title": "INVOCORDER to BOUNDARYCAM Capture Contract",
+  "type": "object",
+  "required": [
+    "actor",
+    "action",
+    "target",
+    "authority",
+    "execution",
+    "evidence",
+    "replay",
+    "recognition",
+    "recourse",
+    "closure"
+  ],
+  "properties": {
+    "actor": {
+      "type": "string",
+      "minLength": 1
+    },
+    "action": {
+      "type": "string",
+      "minLength": 1
+    },
+    "target": {
+      "type": "string",
+      "minLength": 1
+    },
+    "authority": {
+      "type": "string",
+      "minLength": 1
+    },
+    "execution": {
+      "type": "string",
+      "minLength": 1
+    },
+    "evidence": {
+      "type": "string",
+      "minLength": 1
+    },
+    "replay": {
+      "type": "string",
+      "minLength": 1
+    },
+    "recognition": {
+      "type": "string",
+      "minLength": 1
+    },
+    "recourse": {
+      "type": "string",
+      "minLength": 1
+    },
+    "closure": {
+      "type": "string",
+      "minLength": 1
+    }
+  },
+  "additionalProperties": true
+}

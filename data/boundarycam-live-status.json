@@ -1,7 +1,7 @@
 {
   "object_type": "BOUNDARYCAM_LIVE_STATUS",
-  "version": "0.7.0",
-  "generated_at": "2026-06-20T05:39:52+00:00",
+  "version": "0.8.0",
+  "generated_at": "2026-06-20T06:49:39+00:00",
   "repo": "https://github.com/qxvi/BOUNDARYCAM",
   "pages": "https://qxvi.github.io/BOUNDARYCAM",
   "manifest": "https://qxvi.github.io/BOUNDARYCAM/boundarycam-manifest.json",
@@ -44,10 +44,11 @@
     "boundarycam-v0.2.0-control-stack",
     "boundarycam-v0.1.0-public-surface"
   ],
-  "state": "BOUNDARYCAM_WHOLE_STACK_INTEGRITY_LOCKED",
+  "state": "BOUNDARYCAM_INVOCORDER_CAPTURE_ROUTE_OPEN",
   "interactive_console": "https://qxvi.github.io/BOUNDARYCAM/pages/capture.html",
   "runtime_core": true,
   "evidence_bundle_core": true,
   "release_tag": "boundarycam-v0.6.0-evidence-bundle-core",
-  "whole_stack_integrity_locked": true
+  "whole_stack_integrity_locked": true,
+  "invocorder_capture_route_open": true
 }

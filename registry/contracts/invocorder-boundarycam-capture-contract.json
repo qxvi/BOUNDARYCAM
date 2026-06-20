@@ -1,0 +1,67 @@
+{
+  "object_type": "BOUNDARYCAM_INVOCORDER_CAPTURE_CONTRACT",
+  "version": "0.8.0",
+  "state": "BOUNDARYCAM_INVOCORDER_CAPTURE_ROUTE_OPEN",
+  "generated_at": "2026-06-20T06:49:39+00:00",
+  "public_only": true,
+  "route": "INVOCORDER -> BOUNDARYCAM",
+  "route_id": "ROUTE-001-INVOCORDER-BOUNDARYCAM",
+  "primary_question": "What crossed the boundary?",
+  "upstream": {
+    "owner": "INVOCORDER",
+    "role": "machine-action evidence recorder",
+    "expected_inputs": [
+      "actor",
+      "action",
+      "target",
+      "authority",
+      "execution",
+      "evidence",
+      "replay",
+      "recognition",
+      "recourse",
+      "closure"
+    ]
+  },
+  "downstream": {
+    "owner": "qxvi",
+    "repo": "BOUNDARYCAM",
+    "role": "public boundary inspection surface",
+    "outputs": [
+      "Boundary Frame",
+      "hash-chain continuity",
+      "runtime receipt",
+      "Evidence Bundle",
+      "cold verification",
+      "public inspection object"
+    ]
+  },
+  "mapping": {
+    "invocorder.actor": "boundary_frame.actor",
+    "invocorder.action": "boundary_frame.action",
+    "invocorder.target": "boundary_frame.target",
+    "invocorder.authority": "boundary_frame.authority",
+    "invocorder.execution": "boundary_frame.execution",
+    "invocorder.evidence": "boundary_frame.evidence",
+    "invocorder.replay": "boundary_frame.replay",
+    "invocorder.recognition": "boundary_frame.recognition",
+    "invocorder.recourse": "boundary_frame.recourse",
+    "invocorder.closure": "boundary_frame.closure"
+  },
+  "non_claims": [
+    "BOUNDARYCAM does not become INVOCORDER.",
+    "BOUNDARYCAM does not become VERIFRAX.",
+    "BOUNDARYCAM does not claim legal proof.",
+    "BOUNDARYCAM exposes boundary facts for public inspection and cold verification."
+  ],
+  "promotion_gate": [
+    "input object is present",
+    "required capture fields are present",
+    "boundary frame can be constructed",
+    "frame hash can be produced by runtime",
+    "Evidence Bundle can be exported",
+    "bundle can be cold verified"
+  ],
+  "contract_hash": "133c0fd1e198b6109524063f75bdbc7949018252a724be27cf448b4cfa189b10",
+  "contract_id": "BCAM-INVOCORDER-CONTRACT-133C0FD1E198B610"
+}

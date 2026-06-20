@@ -1,0 +1,12 @@
+{
+  "actor": "invocorder.sample.agent",
+  "action": "called external capability",
+  "target": "external system",
+  "authority": "declared operator authority",
+  "execution": "machine action executed",
+  "evidence": "machine action evidence emitted",
+  "replay": "replay path available",
+  "recognition": "boundary recognized",
+  "recourse": "operator review available",
+  "closure": "boundary frame closed"
+}
